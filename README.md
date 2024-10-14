@@ -58,6 +58,6 @@ To generate sample data, you can run the following command:
 To run the tests, execute:
 
 ```bash
- python manage.py pytest
+pytest
 ```
 
