@@ -34,7 +34,7 @@ Before you begin, ensure you have met the following requirements:
 To start the development server, run:
 
 ```bash
-pipenv run python manage.py runserver
+ python manage.py runserver
 ```
 
 ### Running Celery
@@ -42,7 +42,7 @@ pipenv run python manage.py runserver
 To run Celery for handling background tasks, open a new terminal and execute:
 
 ```bash
-pipenv run celery -A storefront worker --loglevel=info
+ celery -A storefront worker --loglevel=info
 ```
 
 ### Generating Sample Data
@@ -50,7 +50,7 @@ pipenv run celery -A storefront worker --loglevel=info
 To generate sample data, you can run the following command:
 
 ```bash
-pipenv run python manage.py seed_db
+ python manage.py seed_db
 ```
 
 ## Running Tests
@@ -58,13 +58,6 @@ pipenv run python manage.py seed_db
 To run the tests, execute:
 
 ```bash
-pipenv run python manage.py test
+ python manage.py pytest
 ```
 
-## Contributing
-
-If you would like to contribute to this project, please fork the repository and create a pull request with your changes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
