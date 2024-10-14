@@ -25,8 +25,6 @@ Before you begin, ensure you have met the following requirements:
    pipenv install
    ```
 
-3. Create a `.env` file in the project root and add your environment variables, including your database settings.
-
 ## Running the Application
 
 ### Running the Development Server
