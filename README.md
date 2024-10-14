@@ -1,43 +1,70 @@
-A Django-based e-commerce platform designed for buying and selling products such as essential oils and perfume bottles. This project focuses on delivering a simple and effective shopping experience.
+# Django Store
 
-## Table of Contents
+This project is a Django-based store application that provides functionality for managing products, categories, and shopping carts.
 
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Running Tests](#running-tests)
-- [Contributing](#contributing)
-- [License](#license)
+## Prerequisites
 
-## Features
+Before you begin, ensure you have met the following requirements:
 
-- User authentication (registration, login, logout)
-- Product catalog with search and filter options
-- Shopping cart functionality
-- Order management
-- Admin panel for managing products and orders
-- REST API for integrating with front-end frameworks
-- Basic styling for a user-friendly interface
-
-## Technologies Used
-
-- **Backend:** Django 5.1.1
-- **Database:** MySQL
-- **Frontend:** HTML, CSS, JavaScript
-- **Others:**
-  - Django REST Framework
-  - Celery for task management
-  - Redis for caching
-  - Django Debug Toolbar for development
-  - Whitenoise for serving static files
+- Python 3.9 or higher
+- Pipenv installed for managing dependencies
+- A running MySQL database
 
 ## Installation
 
-To set up the project locally, follow these steps:
-
-1. **Clone the repository:**
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/mobina-cpu/Django-store.git
    cd Django-store
+   ```
+
+2. Install the required dependencies:
+
+   ```bash
+   pipenv install
+   ```
+
+3. Create a `.env` file in the project root and add your environment variables, including your database settings.
+
+## Running the Application
+
+### Running the Development Server
+
+To start the development server, run:
+
+```bash
+pipenv run python manage.py runserver
+```
+
+### Running Celery
+
+To run Celery for handling background tasks, open a new terminal and execute:
+
+```bash
+pipenv run celery -A storefront worker --loglevel=info
+```
+
+### Generating Sample Data
+
+To generate sample data, you can run the following command:
+
+```bash
+pipenv run python manage.py seed_db
+```
+
+## Running Tests
+
+To run the tests, execute:
+
+```bash
+pipenv run python manage.py test
+```
+
+## Contributing
+
+If you would like to contribute to this project, please fork the repository and create a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
